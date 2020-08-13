@@ -1,0 +1,17 @@
+package uk.gov.hmrc.perftests.example
+
+import uk.gov.hmrc.performance.conf.ServicesConfiguration
+
+import io.gatling.core.Predef._
+import io.gatling.http.Predef._
+
+object TrackingConsentFrontendRequests extends ServicesConfiguration {
+
+  val baseUrl = baseUrlFor("accessibility-statement-frontend")
+
+  val navigateToAccessibilityStatement = {
+    http("Navigate to accessibility statement")
+      .get(s"$baseUrl/accessibility-statement/disguised-remuneration")
+      .check(status.is(200))
+  }
+}
