@@ -11,7 +11,7 @@ object TrackingConsentFrontendRequests extends ServicesConfiguration {
 
   val navigateToAccessibilityStatement = {
     http("Navigate to accessibility statement")
-      .get(s"$baseUrl/accessibility-statement/disguised-remuneration")
+      .get(s"$baseUrl/accessibility-statement/$${serviceName}")
       .check(status.is(200))
   }
 }
