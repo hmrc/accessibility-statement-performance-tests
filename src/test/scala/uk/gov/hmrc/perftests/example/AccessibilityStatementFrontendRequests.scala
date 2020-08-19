@@ -5,7 +5,7 @@ import uk.gov.hmrc.performance.conf.ServicesConfiguration
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 
-object TrackingConsentFrontendRequests extends ServicesConfiguration {
+object AccessibilityStatementFrontendRequests extends ServicesConfiguration {
 
   val baseUrl = baseUrlFor("accessibility-statement-frontend")
 
