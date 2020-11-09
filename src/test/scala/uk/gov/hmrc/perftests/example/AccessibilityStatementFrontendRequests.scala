@@ -25,9 +25,8 @@ object AccessibilityStatementFrontendRequests extends ServicesConfiguration {
 
   val baseUrl = baseUrlFor("accessibility-statement-frontend")
 
-  val navigateToAccessibilityStatement = {
+  val navigateToAccessibilityStatement =
     http("Navigate to accessibility statement")
       .get(s"$baseUrl/accessibility-statement/$${serviceName}")
       .check(status.is(200))
-  }
 }
