@@ -21,7 +21,10 @@ import uk.gov.hmrc.perftests.example.AccessibilityStatementFrontendRequests._
 
 class AccessibilityStatementFrontendSimulation extends PerformanceTestRunner {
 
-  setup("accessibility-statement", "Visit the accessibility statement page") withRequests navigateToAccessibilityStatement
+  setup(
+    "accessibility-statement",
+    "Visit the accessibility statement page"
+  ) withRequests navigateToAccessibilityStatement
 
   runSimulation()
 }
