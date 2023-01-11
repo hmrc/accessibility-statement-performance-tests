@@ -30,8 +30,8 @@ object AccessibilityStatementFrontendRequests extends ServicesConfiguration {
       .get(s"$baseUrl/accessibility-statement/$${serviceName}")
       .resources(
         http("font-bold").get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/govuk/fonts/bold-b542beb274-v2.woff2"),
-        http("css").get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/hmrc-frontend-5.11.1.min.css"),
-        http("js").get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/hmrc-frontend-5.11.1.min.js"),
+        http("css").get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/all-govuk-and-hmrc.scss"),
+        http("js").get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/all.js"),
         http("favicon").get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/govuk/images/favicon.ico"),
         http("govuk-crest").get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/govuk/images/govuk-crest-2x.png"),
         http("font-light").get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/govuk/fonts/light-94a07e06a1-v2.woff2")
