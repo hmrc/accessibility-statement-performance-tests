@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 HM Revenue & Customs
+ * Copyright 2023 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,12 +29,15 @@ object AccessibilityStatementFrontendRequests extends ServicesConfiguration {
     http("Navigate to accessibility statement")
       .get(s"$baseUrl/accessibility-statement/$${serviceName}")
       .resources(
-        http("font-bold").get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/govuk/fonts/bold-b542beb274-v2.woff2"),
+        http("font-bold")
+          .get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/govuk/fonts/bold-b542beb274-v2.woff2"),
         http("css").get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/all-govuk-and-hmrc.scss"),
         http("js").get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/all.js"),
         http("favicon").get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/govuk/images/favicon.ico"),
-        http("govuk-crest").get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/govuk/images/govuk-crest-2x.png"),
-        http("font-light").get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/govuk/fonts/light-94a07e06a1-v2.woff2")
+        http("govuk-crest")
+          .get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/govuk/images/govuk-crest-2x.png"),
+        http("font-light")
+          .get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/govuk/fonts/light-94a07e06a1-v2.woff2")
       )
       .check(status.is(200))
 }
