@@ -35,7 +35,7 @@ object AccessibilityStatementFrontendRequests extends ServicesConfiguration {
         http("js").get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/all.js"),
         http("favicon").get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/govuk/images/favicon.ico"),
         http("govuk-crest")
-          .get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/govuk/images/govuk-crest-2x.png"),
+          .get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/govuk/images/govuk-crest.svg"),
         http("font-light")
           .get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/govuk/fonts/light-94a07e06a1-v2.woff2")
       )
