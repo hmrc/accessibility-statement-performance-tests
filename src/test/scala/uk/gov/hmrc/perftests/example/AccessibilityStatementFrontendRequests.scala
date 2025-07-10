@@ -27,7 +27,7 @@ object AccessibilityStatementFrontendRequests extends ServicesConfiguration {
 
   val navigateToAccessibilityStatement: HttpRequestBuilder =
     http("Navigate to accessibility statement")
-      .get(s"$baseUrl/accessibility-statement/$${serviceName}")
+      .get(s"$baseUrl/accessibility-statement/#{serviceName}")
       .resources(
         http("font-bold")
           .get(s"$baseUrl/accessibility-statement/hmrc-frontend/assets/govuk/fonts/bold-b542beb274-v2.woff2"),
